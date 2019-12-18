@@ -17,6 +17,8 @@
     </ol>
     <p>Mass in Hold: {{cargoMass}} kg</p>
     <p [class.nearMaxMass]="nearMax">Mass Budget Remaining: {{maximumAllowedMass-cargoMass}} kg</p>
+    <!-- why doesn't setting class.nearMax = function NOT work? -->
     <!-- Add the "Empty Hold" button here. -->
+    <button (click)="cargoMass=0; cargoHold=[]; nearMax=false;">Empty hold</button>
 </div>
 
